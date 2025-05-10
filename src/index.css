@@ -5,6 +5,7 @@
   color-scheme: light dark;
   /* color: light-dark(#000f1e, #ddd); */
   /* background-color: light-dark(#eee, #000f1e); */
+  --altcolor: #022f5c;
   color: #000f1e;
   background-color: #eee;
 
@@ -25,9 +26,17 @@ body {
 
 .navbar {
   text-decoration: none;
-  color: light-dark(#ddd, #000f1e);
+  /* color: light-dark(#ddd, var(--altcolor)); */
+  color: var(--altcolor);
 }
 
 .nav-link.active {
-  color: light-dark(#000f1e, #ddd);
+  /* color: light-dark(#000f1e, #ddd); */
+  color: #000f1e;
+}
+
+.nav-link:hover {
+  /* color: light-dark(#000f1e, #ddd); */
+  color: #000f1e;
+  text-shadow: 1px 1px 2px var(--altcolor);
 }

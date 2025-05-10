@@ -3,9 +3,9 @@ import { useLocation } from "react-router-dom";
 
 
 
-const Footer = () => {
+const Footer = ({force=false}) => {
     const location = useLocation();
-    if (location.pathname === "/") {
+    if (location.pathname === "/" && !force) {
         return <></>;
     }
 

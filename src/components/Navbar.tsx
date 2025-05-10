@@ -4,18 +4,19 @@ import { useLocation } from "react-router-dom";
 
 
 const Navbar = () => {
-    const location = useLocation();
-    if (location.pathname === "/") {
-        return <></>;
-    }
+    const {pathname} = useLocation();
     const [menuOpen, setMenuOpen] = useState(false)
 
     useEffect(() => {
         setMenuOpen(false);
-    }, [location.pathname])
+    }, [pathname])
 
     return (
-        <section className="sticky w-full shadow-lg top-0 left-0 flex flex-col bg-gray-200">
+        // need landing page to be clean ✨
+        pathname === "/"? <></>
+        
+        :
+        <section className="sticky w-full shadow-lg top-0 left-0 flex flex-col bg-gray-300">
             <nav className="navbar flex flex-col items-center justify-between w-full  mx-auto gap-5">
                 <div className="flex items-center justify-between w-full gap-10 py-3 px-5 md:px-10 md:py-4">
                     <h2 className="text-xl font-bold"> NextTrend </h2>
@@ -74,7 +75,7 @@ interface NavItemProps {
 }
 
 const NavItem = ({children, to, newWindow}: NavItemProps) => (
-    <NavLink className={`nav-link transition hover:text-[#09BDFF]`} to={to} target={newWindow? "_blank" : ''} rel="noreferrer noopener" >
+    <NavLink className={`nav-link transition `} to={to} target={newWindow? "_blank" : ''} rel="noreferrer noopener" >
         {children}
     </NavLink>
 )
