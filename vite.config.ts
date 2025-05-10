@@ -8,4 +8,10 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  resolve: {
+    alias: {
+      '@assets': '/src/assets',
+      '@components': '/src/components',
+    },
+  },
 })

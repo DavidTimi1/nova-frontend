@@ -21,6 +21,56 @@ This React app is structured similarly to a Next.js App Router for better organi
 
 ### Directory Structure
 ```
+/nova-app
+│
+├── /app
+│   ├── /dashboard
+│   │   ├── page.tsx            # Dashboard main page (home view)
+│   │   └── /components
+│   │
+│   ├── /settings
+│   │   ├── page.tsx            # Settings page
+│   │   └── /components
+│   │
+│   ├── /modules
+│   │   ├── page.tsx            # Learning module page
+│   │   └── /components
+│   │       └── ModuleCard.tsx  # Individual module display component
+│   │
+│   ├── /ai-tutor
+│   │   ├── page.tsx            # AI tutor page
+│   │   └── /components
+│   │
+│   ├── /rewards
+│   │   ├── page.tsx            # Rewards and payment view page
+│   │   └── /components
+│   │
+│   └── /landing
+│       ├── page.tsx            # Landing page
+│       └── /components
+│
+├── /components
+│   ├── Navbar.tsx
+│   ├── Button.tsx
+│   └── Footer.tsx
+│
+├── /styles
+│   ├── globals.css             # Global styles
+│
+├── /utils
+│   └── api.ts                 # Utility for making API calls
+│
+├── /public
+│   ├── /images                # Store static images here (logo, icons)
+│   └── favicon.ico
+│
+├── /types
+│   ├── user.ts                # TypeScript types related to user data
+│   └── settings.ts            # TypeScript types for settings data
+│
+├── tailwind.config.js 
+└── /package.json              # Project dependencies and scripts
+
 src/
 ├── app/
 │   ├── learning-module/
