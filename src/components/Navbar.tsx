@@ -75,7 +75,7 @@ interface NavItemProps {
 }
 
 const NavItem = ({children, to, newWindow}: NavItemProps) => (
-    <NavLink className={`nav-link transition `} to={to} target={newWindow? "_blank" : ''} rel="noreferrer noopener" >
+    <NavLink className={`nav-link transition w-full `} to={to} target={newWindow? "_blank" : ''} rel="noreferrer noopener" >
         {children}
     </NavLink>
 )

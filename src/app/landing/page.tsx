@@ -11,10 +11,8 @@ export default function LandingPage() {
 				<Illustration />
 
 				<div className="flex md:h-screen w-screen md-w-full flex-col bg-[#000f1e] items-center justify-center space-y-6 md:space-y-10 z-3 md:max-w-1/3">
-					<div className="space-y-6">
-						<h1 className="text-5xl font-extrabold text-white"> 
-							NOVA 
-						</h1>
+					<div className="space-y-6 text-center">
+						<h1 className="text-5xl font-extrabold text-white">NOVA</h1>
 						<p className="text-lg text-gray-300"> 
 							The AI tutor of Africa 
 						</p>
@@ -46,7 +44,7 @@ function GetStartedBtn() {
 
 function Illustration() {
 	return (
-		<div className="w-full md:max-w-1/2 scale-150">
+		<div className="w-full md:max-w-1/2 scale-150" style={{aspectRatio: 1000/667}}>
 			<img
 				src={novaIllustrationImg} // Replace with actual path
 				alt="Nova AI Tutor Illustration"
